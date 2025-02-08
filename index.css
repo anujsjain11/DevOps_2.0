@@ -39,4 +39,24 @@ body{
   }
 
 /* main box */
+#centerBox{
+  z-index: 1;
+  /* background-color: green; */
+  color: white;
+  position: absolute;
+  
+}
 
+.aboutUs{
+  z-index: 1;
+  background-color: red;
+  color: white;
+  position: absolute;
+}
+
+.year{
+  z-index: 1;
+  background-color: blueviolet;
+  color: white;
+  position: absolute;
+}
