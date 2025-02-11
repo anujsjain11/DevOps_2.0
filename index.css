@@ -50,24 +50,131 @@ body{
   transform: translate(-50%, -50%); 
   height:clamp(45vh,35vh,45vh);
   width: 90vw;
+  /* left: clamp(20px,40px,380px); */
+  right: clamp(20px,40px,380px);
 }
 
-@media (min-width:1080px){
+
+/* main box component */
+.moto{
+  /* background-color:red; */
+  font-family: Archivo;
+  font-size: 12px;
+  font-weight: 400;
+  /* color: rgba(196, 190, 180, 0.65); */
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 20px;
+  text-align: left;
+  /* padding-top: 30px;  */
+  margin-top: 50px;
+  padding-right: clamp(0px,80px,80px);
+  padding-bottom: clamp(0px,30px,30px);
+  /* padding-left: clamp(20px,80px,80px); */
+  padding-left: 210px;
+  position: absolute;
+  display: inline-block;
+}
+
+.team{
+
+  
+  font-family:Archivo Black;
+  font-size: 150px;
+  font-weight: 400;
+  /* color: white; */
+  color: transparent;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  -webkit-text-stroke: 1px rgb(196, 190, 180);
+  line-height: 130px;
+  text-align: center;
+  padding-top: 30px;
+  padding-right: 100px;
+  padding-bottom: 40px;
+  /* padding-left: 450px; */
+  padding-left: 400px;
+  /* transform: perspective(600px) translate(90px) rotateY(25deg); */
+  /* vertical-align: text-top; */
+  position:absolute;
+  display: inline-block;
+}
+
+.club{
+  font-family: Archivo Black;
+  font-size: 135px;
+  font-weight: 400;
+  color: rgb(196, 190, 180);
+  text-transform: uppercase;
+  letter-spacing: -7px;
+  line-height: 500px;
+  text-align: center;
+  position: relative;
+  /* transform: perspective(600px) translate(-200px) rotateY(-25deg); */
+  display: block;
+  /* background: transparent; */
+}
+
+.symoble{
+  font-family: Arial Black, Gadget, sans-serif;
+  font-size: 128px;
+  font-weight: 400;
+  color: rgba(157, 255, 0, 0);
+  letter-spacing: -7px;
+  -webkit-text-stroke: 0.711111px rgb(196, 190, 180);
+  line-height: 164px;
+  text-align: left;
+  margin: -280px 150px 0px;
+  padding: 0px 7px 0px 50px;
+  border-radius: 0px;
+  position: relative;
+  /* display: inline-block; */
+  /* background: transparent; */
+}
+
+.info{
+  font-family: Archivo;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(196, 190, 180, 0.65);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 22px;
+  text-align: left;
+  /* use clamp */
+  padding: 0px 300px 0px 400px;
+  margin-top: -60px;
+  display: inline-block;
+  /* background: transparent; */
+}
+
+
+/* big screen (dektop) */
+@media (min-width:1920px){
   #centerBox{
     width: 60vw;
     }
+  .moto{
+    padding-top: 20px;
+  }
   }
 
-@media(max-width:800px){
+/*small screen (phone) */
+@media(max-width:360px){
   #centerBox{
     width: 85vw;
     }
+  .moto{
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 20px;
   }
-  
-
-/* main box component */
-
-
+  .team{
+    font-size: 70px;
+  }
+  }
 
 
 .footer{
