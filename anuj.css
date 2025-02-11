@@ -1,0 +1,381 @@
+/* google font */
+.archivo{
+  font-family: "Archivo", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+} 
+
+.archivo-black-regular {
+  font-family: "Archivo Black", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+html,body{
+    overflow-x:hidden;
+    max-width: 100%;
+}
+
+
+
+#header{
+    top:1vh;
+    display: block;
+    width: fit-content;
+    height: 15vh;
+    /* position: relative; */
+}
+
+
+#mainBox {
+    padding-right: 0vmax;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 4vmax;
+    pointer-events: none;
+    line-height: 18px;
+    text-align: center;
+    overflow: visible;
+    width: max-content ;
+    height: auto;
+    float: none;
+    clear: none;
+    z-index: 7;
+    position: relative;
+    vertical-align: top;
+    transform-origin: 50% 50% 0px;
+    transform: translate(0px);
+    display: block;
+    background: transparent;
+    visibility: inherit;
+    opacity: 1;
+  }
+
+#motoBox{
+    overflow: hidden;
+margin: 10px 0px 0px;
+min-height: 0px;
+width: auto;
+height: auto;
+float: left;
+clear: none;
+z-index: 12;
+position: relative;
+vertical-align: inherit;
+display: inline-block;
+visibility: inherit;
+translate: none;
+rotate: none;
+scale: none;
+opacity: 1;
+transform: translate(0px);
+}
+
+
+
+#moto{
+    pointer-events: none;
+font-family: Archivo;
+font-size: 12px;
+font-weight: 400;
+color: rgba(196, 190, 180, 0.65);
+text-transform: uppercase;
+text-decoration: none;
+letter-spacing: 2px;
+line-height: 20px;
+text-align: left;
+white-space: normal;
+padding: 20px 15vw 30px;
+border-radius: 0px;
+vertical-align: inherit;
+transform-origin: 50% 50% 0px;
+transform: translate(0px);
+width: auto;
+height: auto;
+display: block;
+visibility: inherit;
+background: transparent;
+opacity: 1;
+}
+
+
+/* #d{
+    overflow: visible;
+margin: 0px;
+padding: 0px;
+width: 100% ;
+height: 7.11111px;
+float: none;
+clear: both;
+z-index: 11;
+position: relative;
+vertical-align: inherit;
+transform-origin: 50% 50% 0px;
+transform: translate(0px);
+display: none;
+background: transparent;
+visibility: hidden;
+opacity: 1;
+pointer-events: auto;
+} */
+
+#teamBox{
+    overflow: hidden;
+margin: 30px;
+min-height: 0px;
+width: fit-content;
+height: auto;
+float: none;
+clear: none;
+z-index: 10;
+position: relative;
+vertical-align: inherit;
+display: inline - block;
+visibility: inherit;
+translate: none;
+rotate: none;
+scale: none;
+opacity: 1;
+transform: translate(0px);
+padding-bottom: 1vw;
+}
+
+
+
+#team{
+    pointer-events: none;
+font-family: Archivo Black;
+font-size: 7.6vmax;
+font-weight: 400;
+color: transparent;
+text-transform: uppercase;
+text-decoration: none;
+letter-spacing: -0.625vmin; 
+-webkit-text-stroke: 0.208vmin rgb(196, 190, 180);
+line-height: 11.33vmin;
+text-align: center;
+white-space: normal;
+padding: 21px 71px 0px 0px;
+border-radius: 0px;
+vertical-align: inherit;
+transform-origin: 50% 50% 0px;
+transform: perspective(600px) translate(90px) rotateY(25deg);
+width: auto;
+height: auto;
+display: inline-block;
+visibility: inherit;
+background: transparent;
+opacity: 1;
+}
+
+#clubBox{
+    width: fit-content;
+  height: auto;
+  position: relative;
+  left: 30vw;
+}
+
+#club{
+    right: 25%;
+    pointer-events: none;
+font-family: Archivo Black;
+font-size:10vmax;
+/* font-size: 135px; */
+font-weight: 400;
+color: rgb(196, 190, 180);
+text-transform: uppercase;
+text-decoration: none;
+letter-spacing:-0.625vmin;
+/* letter-spacing: -7.11111px; */
+line-height:12.444vmin;
+/* line-height: 142px; */
+text-align: center;
+white-space: normal;
+overflow: visible;
+margin: 0px;
+padding: 0px 0px 14px;
+min-height: 0px;
+width: 100%;
+height: 100%;
+float: none;
+clear: none;
+z-index: 9;
+border-radius: 0px;
+position: relative;
+vertical-align: inherit;
+transform-origin: 50% 50% 0px;
+transform: perspective(600px) translate(-200px) rotateY(-25deg);
+display: inline-block;
+background: transparent;
+visibility: inherit;
+opacity: 1;
+margin-top: 25px;
+}
+
+
+#symboleBox{
+    pointer-events: none;
+font-family: Arial Black,Gadget,sans-serif;
+font-size: 22vmin;
+font-weight: 400;
+color: rgba(157, 255, 0, 0);
+text-transform: uppercase;
+text-decoration: none;
+letter-spacing: -1.111vmin; 
+-webkit-text-stroke: 0.2vmin rgb(196, 190, 180);
+line-height: 25.6vmin;
+text-align: left;
+white-space: normal;
+overflow: visible;
+margin: -90px 0px 0px;
+padding: 0px 7px 0px 50px;
+min-height: 0px;
+width: auto;
+height: auto;
+float: left;
+clear: none;
+z-index: 8;
+border-radius: 0px;
+position: relative;
+vertical-align: inherit;
+transform-origin: 50% 50% 0px;
+transform: translate(0px);
+display: inline-block;
+background: transparent;
+visibility: inherit;
+opacity: 1;
+margin-left: 155px;
+margin-top: -75px;
+}
+
+
+
+#symobleBox{
+    position: relative;
+display: inline-block;
+}
+
+#symbole{
+    position: relative;
+display: inline-block;
+translate: none;
+rotate: none;
+scale: none;
+visibility: inherit;
+opacity: 1;
+transform: translate(0px);
+color: rgba(157, 255, 0, 0);
+}
+
+
+
+#infoBox{
+    overflow: hidden;
+margin: 0px;
+min-height: 0px;
+width: 35vmax;
+height: auto;
+float: right;
+clear: none;
+z-index: 7;
+position: relative;
+vertical-align: inherit;
+display: inline - block;
+visibility: inherit;
+translate: none;
+rotate: none;
+scale: none;
+opacity: 1;
+transform: translate(0px);
+overflow: visible;
+margin-top: 30px;
+margin-left: 55px;
+}
+
+
+#info{
+    pointer-events: none;
+font-family: Archivo;
+font-size: 12px;
+font-weight: 400;
+color: rgba(196, 190, 180, 0.65);
+text-transform: uppercase;
+text-decoration: none;
+letter-spacing: 2px;
+line-height: 22px;
+text-align: left;
+white-space: normal;
+padding: 20px 0px 40px 100px;
+border-radius: 0px;
+vertical-align: inherit;
+transform-origin: 50% 50% 0px;
+transform: perspective(600px);
+width: 100% ;
+height: auto;
+display: block;
+visibility: inherit;
+background: transparent;
+opacity: 1;
+}
+
+
+
+/* #footer{
+  
+} */
+
+@media (max-width:777px) {
+    #team{
+        transform:perspective(600px) rotateY(25deg);
+    }
+    
+    
+}
+
+
+
+@media (max-width:580px) {
+    html,body{
+        overflow-x:hidden;
+        max-width: 100%;
+    }
+    #mainBox{
+        padding-left: 7vmin;
+    }
+    #teamBox{
+        padding-top: 8vh;
+        margin: 30px 30px 0px 30px;
+    }
+    #tean{
+        font-size: large;
+    }
+    #moto{
+        font-size:10px;
+        line-height: 16px;
+        padding: 0px 0px 0px 20px;
+    }
+    #clubBox{
+        margin-bottom: 2vh;
+    }
+    #club{
+        transform: perspective(600px) translate(-36px) rotateY(-25deg);
+    }
+    #info{
+        padding: 0px 0px 40px 20px;
+    }
+    #infoBox{
+        
+        margin-left: 0px;
+        margin-top: 5px; 	
+        margin-right: 5vw;
+        left: -20%;
+    }
+    #symboleBox{
+        margin-right: 15vw;
+        margin-left: 0px;
+        padding: 2.8vw 7px 0px 3vw;
+    }
+}
