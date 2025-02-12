@@ -655,3 +655,51 @@ a:link ,a:visited , a:hover , a:active {
     
 }
 
+
+
+
+
+.triangle {
+    width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #00000000 0%, #00000000 50%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 100%);
+  transition: revert;
+  rotate: inherit;
+  border: 0px;
+  padding: 0px;
+  top: 0px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+@keyframes openR {
+    0%{
+
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+@keyframes openL {
+    0%{
+
+    }
+    100%{
+        left: -100%;
+    }
+}
+
+#leftTriangel{
+    animation-name: openR;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#rightTriangel{
+    animation-name: openL;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
