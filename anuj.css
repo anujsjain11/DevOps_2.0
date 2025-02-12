@@ -1,25 +1,23 @@
 /* google font */
 .archivo{
-  font-family: "Archivo", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:"wdth" 100;
+    font-family: "Archivo", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
 } 
 
 .archivo-black-regular {
-  font-family: "Archivo Black", serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Archivo Black", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-
+/* prevent scroll or overflow to right */
 html,body{
     overflow-x:hidden;
     max-width: 100%;
 }
-
-
 
 #header{
     top:1vh;
@@ -29,7 +27,59 @@ html,body{
     /* position: relative; */
 }
 
+/* shape of the staring animation */
+.triangle {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #00000000 0%, #00000000 50%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 100%);
+    transition: revert;
+    rotate: inherit;
+    border: 0px;
+    padding: 0px;
+    top: 0px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
 
+/*starting animation*/
+@keyframes openR {
+    0%{ }
+    100%{left: 100%;}
+}
+
+@keyframes openL {
+    0%{}
+    100%{left: -100%;}
+}
+
+/* trigger stating animation*/
+#leftTriangel{
+    animation-name: openR;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#rightTriangel{
+    animation-name: openL;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+/* area to trigger "team" and "devops" text animation*/
+#mainBoxHover{
+    z-index: 3;
+    /* background-color: red; */
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 27vw;
+    top: 20vh;
+    right: 9vw;
+}
+
+/*main area contain moto, team text, club name , info*/
 #mainBox {
     padding-right: 0vmax;
     padding-top: 0px;
@@ -52,58 +102,55 @@ html,body{
     background: transparent;
     visibility: inherit;
     opacity: 1;
-  }
+}
 
 #motoBox{
     overflow: hidden;
-margin: 10px 0px 0px;
-min-height: 0px;
-width: auto;
-height: auto;
-float: left;
-clear: none;
-z-index: 12;
-position: relative;
-vertical-align: inherit;
-display: inline-block;
-visibility: inherit;
-translate: none;
-rotate: none;
-scale: none;
-opacity: 1;
-transform: translate(0px);
+    margin: 10px 0px 0px;
+    min-height: 0px;
+    width: auto;
+    height: auto;
+    float: left;
+    clear: none;
+    z-index: 12;
+    position: relative;
+    vertical-align: inherit;
+    display: inline-block;
+    visibility: inherit;
+    translate: none;
+    rotate: none;
+    scale: none;
+    opacity: 1;
+    transform: translate(0px);
 }
-
-
 
 #moto{
     pointer-events: none;
-font-family: Archivo;
-font-size: 12px;
-font-weight: 400;
-color: rgba(196, 190, 180, 0.65);
-text-transform: uppercase;
-text-decoration: none;
-letter-spacing: 2px;
-line-height: 20px;
-text-align: left;
-white-space: normal;
-padding: 20px 13vmax 30px;
-border-radius: 0px;
-vertical-align: inherit;
-transform-origin: 50% 50% 0px;
-transform: translate(0px);
-width: auto;
-height: auto;
-display: block;
-visibility: inherit;
-background: transparent;
-opacity: 1;
+    font-family: Archivo;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(196, 190, 180, 0.65);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    line-height: 20px;
+    text-align: left;
+    white-space: normal;
+    padding: 20px 13vmax 30px;
+    border-radius: 0px;
+    vertical-align: inherit;
+    transform-origin: 50% 50% 0px;
+    transform: translate(0px);
+    width: auto;
+    height: auto;
+    display: block;
+    visibility: inherit;
+    background: transparent;
+    opacity: 1;
 }
 
-
 /* #d{
-    overflow: visible;
+overflow: visible;
 margin: 0px;
 padding: 0px;
 width: 100% ;
@@ -124,206 +171,193 @@ pointer-events: auto;
 
 #teamBox{
     overflow: hidden;
-margin: 30px;
-min-height: 0px;
-width: fit-content;
-height: auto;
-float: none;
-clear: none;
-z-index: 10;
-position: relative;
-vertical-align: inherit;
-display: inline - block;
-visibility: inherit;
-translate: none;
-rotate: none;
-scale: none;
-opacity: 1;
-transform: translate(0px);
-padding-bottom: 1vw;
+    margin: 30px;
+    min-height: 0px;
+    width: fit-content;
+    height: auto;
+    float: none;
+    clear: none;
+    z-index: 10;
+    position: relative;
+    vertical-align: inherit;
+    display: inline - block;
+    visibility: inherit;
+    translate: none;
+    rotate: none;
+    scale: none;
+    opacity: 1;
+    transform: translate(0px);
+    padding-bottom: 1vw;
 }
-
-
 
 #team{
     pointer-events: none;
-font-family: Archivo Black;
-font-size: 14vmin;
-/* font-size: 7.6vmax; */
-font-weight: 400;
-color: transparent;
-text-transform: uppercase;
-text-decoration: none;
-letter-spacing: -0.625vmin; 
--webkit-text-stroke: 0.208vmin rgb(196, 190, 180);
-line-height: 11.33vmin;
-text-align: center;
-white-space: normal;
-padding: 21px 71px 0px 0px;
-border-radius: 0px;
-vertical-align: inherit;
-transform-origin: 50% 50% 0px;
-transform: perspective(600px) translate(90px) rotateY(25deg);
-width: auto;
-height: auto;
-display: inline-block;
-visibility: inherit;
-background: transparent;
-opacity: 1;
+    font-family: Archivo Black;
+    font-size: 14vmin;
+    /* font-size: 7.6vmax; */
+    font-weight: 400;
+    color: transparent;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: -0.625vmin; 
+    -webkit-text-stroke: 0.208vmin rgb(196, 190, 180);
+    line-height: 11.33vmin;
+    text-align: center;
+    white-space: normal;
+    padding: 21px 71px 0px 0px;
+    border-radius: 0px;
+    vertical-align: inherit;
+    transform-origin: 50% 50% 0px;
+    transform: perspective(600px) translate(90px) rotateY(25deg);
+    width: auto;
+    height: auto;
+    display: inline-block;
+    visibility: inherit;
+    background: transparent;
+    opacity: 1;
 }
 
 #clubBox{
     width: fit-content;
-  height: auto;
-  position: relative;
-  left: 30vw;
+    height: auto;
+    position: relative;
+    left: 30vw;
 }
 
 #club{
     right: 10%;
-font-size: 18vmin;
+    font-size: 18vmin;
     /* right: 25%; */
     pointer-events: none;
-font-family: Archivo Black;
-/* font-size:10vmax; */
-/* font-size: 135px; */
-font-weight: 400;
-color: rgb(196, 190, 180);
-text-transform: uppercase;
-text-decoration: none;
-letter-spacing:-0.625vmin;
-/* letter-spacing: -7.11111px; */
-line-height:12.444vmin;
-/* line-height: 142px; */
-text-align: center;
-white-space: normal;
-overflow: visible;
-margin: 0px;
-padding: 0px 0px 14px;
-min-height: 0px;
-width: 100%;
-height: 100%;
-float: none;
-clear: none;
-z-index: 9;
-border-radius: 0px;
-position: relative;
-vertical-align: inherit;
-transform-origin: 50% 50% 0px;
-transform: perspective(600px) translate(-200px) rotateY(-25deg);
-display: inline-block;
-background: transparent;
-visibility: inherit;
-opacity: 1;
-margin-top: 25px;
+    font-family: Archivo Black;
+    /* font-size:10vmax; */
+    /* font-size: 135px; */
+    font-weight: 400;
+    color: rgb(196, 190, 180);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing:-0.625vmin;
+    /* letter-spacing: -7.11111px; */
+    line-height:12.444vmin;
+    /* line-height: 142px; */
+    text-align: center;
+    white-space: normal;
+    overflow: visible;
+    margin: 0px;
+    padding: 0px 0px 14px;
+    min-height: 0px;
+    width: 100%;
+    height: 100%;
+    float: none;
+    clear: none;
+    z-index: 9;
+    border-radius: 0px;
+    position: relative;
+    vertical-align: inherit;
+    transform-origin: 50% 50% 0px;
+    transform: perspective(600px) translate(-200px) rotateY(-25deg);
+    display: inline-block;
+    background: transparent;
+    visibility: inherit;
+    opacity: 1;
+    margin-top: 25px;
 }
-
 
 #symboleBox{
     pointer-events: none;
-font-family: Arial Black,Gadget,sans-serif;
-font-size: 22vmin;
-font-weight: 400;
-color: rgba(157, 255, 0, 0);
-text-transform: uppercase;
-text-decoration: none;
-letter-spacing: -1.111vmin; 
--webkit-text-stroke: 0.2vmin rgb(196, 190, 180);
-line-height: 25.6vmin;
-text-align: left;
-white-space: normal;
-overflow: visible;
-margin: -90px 0px 0px;
-padding: 0px 5px 0px 13vw;
-min-height: 0px;
-width: auto;
-height: auto;
-float: left;
-clear: none;
-z-index: 8;
-border-radius: 0px;
-position: relative;
-vertical-align: inherit;
-transform-origin: 50% 50% 0px;
-transform: translate(0px);
-display: inline-block;
-background: transparent;
-visibility: inherit;
-opacity: 1;
-/* margin-left: 155px; */
-margin-top: -75px;
-}
-
-
-
-#symobleBox{
+    font-family: Arial Black,Gadget,sans-serif;
+    font-size: 22vmin;
+    font-weight: 400;
+    color: rgba(157, 255, 0, 0);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: -1.111vmin; 
+    -webkit-text-stroke: 0.2vmin rgb(196, 190, 180);
+    line-height: 25.6vmin;
+    text-align: left;
+    white-space: normal;
+    overflow: visible;
+    margin: -90px 0px 0px;
+    padding: 0px 5px 0px 13vw;
+    min-height: 0px;
+    width: auto;
+    height: auto;
+    float: left;
+    clear: none;
+    z-index: 8;
+    border-radius: 0px;
     position: relative;
-display: inline-block;
+    vertical-align: inherit;
+    transform-origin: 50% 50% 0px;
+    transform: translate(0px);
+    display: inline-block;
+    background: transparent;
+    visibility: inherit;
+    opacity: 1;
+    /* margin-left: 155px; */
+    margin-top: -75px;
 }
 
 #symbole{
     position: relative;
-display: inline-block;
-translate: none;
-rotate: none;
-scale: none;
-visibility: inherit;
-opacity: 1;
-transform: translate(0px);
-color: rgba(157, 255, 0, 0);
+    display: inline-block;
+    translate: none;
+    rotate: none;
+    scale: none;
+    visibility: inherit;
+    opacity: 1;
+    transform: translate(0px);
+    color: rgba(157, 255, 0, 0);
 }
-
-
 
 #infoBox{
     overflow: hidden;
-margin: 0px;
-min-height: 0px;
-width: 35vmax;
-height: auto;
-float: left;
-clear: none;
-z-index: 7;
-position: relative;
-vertical-align: inherit;
-display: inline - block;
-visibility: inherit;
-translate: none;
-rotate: none;
-scale: none;
-opacity: 1;
-transform: translate(0px);
-overflow: visible;
-margin-top: 30px;
-margin-left: 55px;
+    margin: 0px;
+    min-height: 0px;
+    width: 35vmax;
+    height: auto;
+    float: left;
+    clear: none;
+    z-index: 7;
+    position: relative;
+    vertical-align: inherit;
+    display: inline - block;
+    visibility: inherit;
+    translate: none;
+    rotate: none;
+    scale: none;
+    opacity: 1;
+    transform: translate(0px);
+    overflow: visible;
+    margin-top: 30px;
+    margin-left: 55px;
 }
-
 
 #info{
     pointer-events: none;
-font-family: Archivo;
-font-size: 12px;
-font-weight: 400;
-color: rgba(196, 190, 180, 0.65);
-text-transform: uppercase;
-text-decoration: none;
-letter-spacing: 2px;
-line-height: 22px;
-text-align: left;
-white-space: normal;
-padding: 20px 0px 40px 100px;
-border-radius: 0px;
-vertical-align: inherit;
-transform-origin: 50% 50% 0px;
-transform: perspective(600px);
-width: 100% ;
-height: auto;
-display: block;
-visibility: inherit;
-background: transparent;
-opacity: 1;
+    font-family: Archivo;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(196, 190, 180, 0.65);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    line-height: 22px;
+    text-align: left;
+    white-space: normal;
+    padding: 20px 0px 40px 100px;
+    border-radius: 0px;
+    vertical-align: inherit;
+    transform-origin: 50% 50% 0px;
+    transform: perspective(600px);
+    width: 100% ;
+    height: auto;
+    display: block;
+    visibility: inherit;
+    background: transparent;
+    opacity: 1;
 }
-
+/* end of main area*/
 
 
 #footer{
@@ -336,73 +370,36 @@ opacity: 1;
 
 #year{
     font-family: Archivo;
-  font-size: 22px;
-  font-weight: 400;
-  color: rgba(196, 190, 180, 0.65);
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 2px;
-  line-height: 30px;
-  text-align: left;
-  white-space: normal;
-  overflow: visible;
-  margin: 0px 0px 0px 10px;
-  padding: 0px;
-  min-height: 0px;
-  width: auto;
-  height: auto;
-  float: left;
-  clear: none;
-  z-index: 8;
-  border-radius: 0px;
-  position: relative;
-  vertical-align: inherit;
-  transform-origin: 50% 50% 0px;
-  transform: translate(0px);
-  display: inline-block;
-  background: transparent;
-  visibility: inherit;
-  opacity: 1;
-  pointer-events: auto;
-  padding-left: 10vw;
-  padding-top: 0vh;
-}
-
-
-#nextPage{
-    font-family: Archivo;
-  font-size: 10px;
-  font-weight: 400;
-  color: rgba(196, 190, 180, 0.65);
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 2.23667px;
-  line-height: 60px;
-  text-align: center;
-  white-space: normal;
-  overflow: visible;
-  margin: 0px;
-  padding: 0px 37px;
-  min-height: 0px;
-  width: auto;
-  height: auto;
-  float: right;
-  clear: none;
-  border-style: solid;
-  border-width: 1px 0px 0px 1px;
-  border-color: rgba(196, 190, 180, 0.5);
-  z-index: 7;
-  border-radius: 0%;
-  position: relative;
-  cursor: pointer;
-  vertical-align: inherit;
-  transform-origin: 50% 50% 0px;
-  transform: translate3d(0px, 0px, 0px);
-  display: inline-block;
-  background: rgba(255, 255, 255, 0);
-  visibility: inherit;
-  opacity: 1;
-  pointer-events: auto;
+    font-size: 22px;
+    font-weight: 400;
+    color: rgba(196, 190, 180, 0.65);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    line-height: 30px;
+    text-align: left;
+    white-space: normal;
+    overflow: visible;
+    margin: 0px 0px 0px 10px;
+    padding: 0px;
+    min-height: 0px;
+    width: auto;
+    height: auto;
+    float: left;
+    clear: none;
+    z-index: 8;
+    border-radius: 0px;
+    position: relative;
+    vertical-align: inherit;
+    transform-origin: 50% 50% 0px;
+    transform: translate(0px);
+    display: inline-block;
+    background: transparent;
+    visibility: inherit;
+    opacity: 1;
+    pointer-events: auto;
+    padding-left: 10vw;
+    padding-top: 0vh;
 }
 
 #nextPageBox{
@@ -411,38 +408,52 @@ opacity: 1;
     padding-right: 10vw;
 }
 
+#nextPage{
+    font-family: Archivo;
+    font-size: 10px;
+    font-weight: 400;
+    color: rgba(196, 190, 180, 0.65);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2.23667px;
+    line-height: 60px;
+    text-align: center;
+    white-space: normal;
+    overflow: visible;
+    margin: 0px;
+    padding: 0px 37px;
+    min-height: 0px;
+    width: auto;
+    height: auto;
+    float: right;
+    clear: none;
+    border-style: solid;
+    border-width: 1px 0px 0px 1px;
+    border-color: rgba(196, 190, 180, 0.5);
+    z-index: 7;
+    border-radius: 0%;
+    position: relative;
+    cursor: pointer;
+    vertical-align: inherit;
+    transform-origin: 50% 50% 0px;
+    transform: translate3d(0px, 0px, 0px);
+    display: inline-block;
+    background: rgba(255, 255, 255, 0);
+    visibility: inherit;
+    opacity: 1;
+    pointer-events: auto;
+}
 
+/* disable the decoration of link in anchor tag*/
 a:link ,a:visited , a:hover , a:active {
     color: rgba(196, 190, 180, 0.65);
     text-decoration: none;
-  }
-  
- 
-
-
-
-@media (max-width:777px) {
-    #mainBox{
-        padding-left: 7vmax;
-    }
-    #team{
-        transform:perspective(600px) rotateY(25deg);
-        padding-left: 2vw;
-    }
-    #infoBox{
-        right:35vmax;
-        margin-top: 0px;
-        float: right;
-    }
-
 }
 
 
+/* alignment for different devise*/
 
-
-
-
-
+/*small devise*/
 @media (max-width:580px) {
     html,body{
         overflow-x:hidden;
@@ -473,7 +484,6 @@ a:link ,a:visited , a:hover , a:active {
         padding: 0px 0px 40px 20px;
     }
     #infoBox{
-        
         margin-left: 0px;
         margin-top: 5px; 	
         margin-right: 5vw;
@@ -484,29 +494,26 @@ a:link ,a:visited , a:hover , a:active {
         margin-left: 0px;
         padding: 2.8vw 7px 0px 3vw;
     }
+
+    /*trigger animation of "club" on hover*/
     .fwdClub{
         animation-name: spinClub;
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
         animation-timing-function: ease;
     }
-    
-    
+
     .revClub{
         animation-name: spinClub;
         animation-duration: 0.5s;
         animation-direction: reverse;
         animation-timing-function: ease;
     }
-    
-    
-      @keyframes spinClub {
-    
-        0%{ 
-            transform: (600px) translate(-200px) rotateY(-25deg);
-    
-        }
-        
+
+    /* animation of "club" 	*/
+    @keyframes spinClub {
+        0%{transform: (600px) translate(-200px) rotateY(-25deg);}
+
         100%{
         transform: perspective(600px) translate3d(0px,0px,0px) ;
         scale: 1;
@@ -515,191 +522,134 @@ a:link ,a:visited , a:hover , a:active {
 }
 
 
-#mainBoxHover{
-    z-index: 3;
-  /* background-color: red; */
-  width: 50%;
-  height: 50%;
-  position: absolute;
-  left: 27vw;
-  top: 20vh;
-  right: 9vw;
-}
+/* trigger animation for both "team" and "devops" */
+@media (min-width:580px) and (max-width:777px) {
 
-@media (min-width:777px){
-.fwd{
-    animation-name: spin;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
-}
-
-
-.rev{
-    animation-name: spin;
-    animation-duration:0.5s;
-    animation-direction: reverse;
-    animation-timing-function: ease;
-}
-
-
-  @keyframes spin {
-
-    0%{ 
-        transform: perspective(600px) translate(90px) rotateY(25deg);
-
-    }
-    
-    100%{
-    transform: perspective(600px) translate3d(30px,0px,0px);
-    scale: 0.8;
-    }
-}
-
-.fwdClub{
-    animation-name: spinClub;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
-}
-
-
-.revClub{
-    animation-name: spinClub;
-    animation-duration: 0.5s;
-    animation-direction: reverse;
-    animation-timing-function: ease;
-}
-
-
-
-  @keyframes spinClub {
-
-    0%{ 
-        transform: (600px) translate(-200px) rotateY(-25deg);
-
-    }
-    
-    100%{
-    transform: perspective(600px) translate3d(0px,0px,0px) ;
-    scale: 1;
-    }
-}
-}
-
-@media (max-width:777px){
-    .fwd{
-        animation-name: spin;
-        animation-duration: 0.5s;
-        animation-fill-mode: forwards;
-        /* animation-timing-function:ease; */
-    }
-    
-    
-    .rev{
-        animation-name: spin;
-        animation-duration: 0.5s;
-        animation-direction: reverse;
-        /* animation-timing-function: ease; */
-    }
-@keyframes spin {
-
-    0%{ 
-        transform:perspective(600px) rotateY(25deg);
-
-    }
-    
-    100%{
-        transform: perspective(600px) translate3d(30px,0px,0px);
-        scale: 0.8;
-    }
-    
-}
-
-}
-@media (max-width:777px) and (min-width:580px){
+    /*trigger animation of "club" on hover*/
     .fwdClub{
         animation-name: spinClub;
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
         animation-timing-function: ease;
     }
-    
-    
+
+    .revClub{
+    animation-name: spinClub;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+    animation-timing-function: ease;
+    }
+
+    /* animation of "club" 	*/
+    @keyframes spinClub {
+        0%{transform: (600px) translate(-200px) rotateY(-25deg);}
+
+        100%{
+        transform: perspective(600px) translate3d(-100px,0px,0px) ;
+        scale: 1;
+        }
+    }
+}
+
+/* medium devise */
+@media (max-width:777px) {
+    #mainBox{
+        padding-left: 7vmax;
+    }
+    #team{
+        transform:perspective(600px) rotateY(25deg);
+        padding-left: 2vw;
+    }
+    #infoBox{
+        right:35vmax;
+        margin-top: 0px;
+        float: right;
+    }
+
+    /*trigger animation of "team" on hover*/
+    .fwd{
+        animation-name: spin;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        /* animation-timing-function:ease; */
+    }
+
+    .rev{
+        animation-name: spin;
+        animation-duration: 0.5s;
+        animation-direction: reverse;
+        /* animation-timing-function: ease; */
+    }
+
+    /* animation of "team" 	*/
+    @keyframes spin {
+        0%{transform:perspective(600px) rotateY(25deg);}
+
+        100%{
+            transform: perspective(600px) translate3d(30px,0px,0px);
+            scale: 0.8;
+        }
+    }
+}
+
+/*large devise  */
+@media (min-width:777px){
+    /*trigger animation of "team" on hover*/
+    .fwd{
+        animation-name: spin;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+
+    .rev{
+        animation-name: spin;
+        animation-duration:0.5s;
+        animation-direction: reverse;
+        animation-timing-function: ease;
+    }
+
+    /* animation of "team" 	*/
+    @keyframes spin {
+        0%{transform: perspective(600px) translate(90px) rotateY(25deg);}
+        
+        100%{
+            transform: perspective(600px) translate3d(30px,0px,0px);
+            scale: 0.8;
+        }
+    }
+
+    /*trigger animation of "club" on hover*/
+    .fwdClub{
+        animation-name: spinClub;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+
     .revClub{
         animation-name: spinClub;
         animation-duration: 0.5s;
         animation-direction: reverse;
         animation-timing-function: ease;
     }
-    
-    
-      @keyframes spinClub {
-    
-        0%{ 
-            transform: (600px) translate(-200px) rotateY(-25deg);
-    
-        }
-        
+
+    /* animation of "club" 	*/
+    @keyframes spinClub {
+        0%{transform: (600px) translate(-200px) rotateY(-25deg);}
+
         100%{
-        transform: perspective(600px) translate3d(-100px,0px,0px) ;
-        scale: 1;
+            transform: perspective(600px) translate3d(0px,0px,0px) ;
+            scale: 1;
         }
     }
-
-
 }
 
+
+
+/* alignment */
 @media (min-width:777px) and (max-width:1000px) {
     #mainBox{padding-left: 7vmax;}
-    
 }
 
 
-
-
-
-.triangle {
-    width: 100vw;
-  height: 100vh;
-  background: linear-gradient(to bottom right, #00000000 0%, #00000000 50%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 100%);
-  transition: revert;
-  rotate: inherit;
-  border: 0px;
-  padding: 0px;
-  top: 0px;
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-}
-
-@keyframes openR {
-    0%{
-
-    }
-    100%{
-        left: 100%;
-    }
-}
-
-@keyframes openL {
-    0%{
-
-    }
-    100%{
-        left: -100%;
-    }
-}
-
-#leftTriangel{
-    animation-name: openR;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-}
-
-#rightTriangel{
-    animation-name: openL;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-}
