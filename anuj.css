@@ -25,7 +25,7 @@ html,body{
     top:1vh;
     display: block;
     width: fit-content;
-    height: 15vh;
+    height: 10vh;
     /* position: relative; */
 }
 
@@ -34,7 +34,7 @@ html,body{
     padding-right: 0vmax;
     padding-top: 0px;
     padding-bottom: 0px;
-    padding-left: 4vmax;
+    padding-left: 14vmax;
     pointer-events: none;
     line-height: 18px;
     text-align: center;
@@ -88,7 +88,7 @@ letter-spacing: 2px;
 line-height: 20px;
 text-align: left;
 white-space: normal;
-padding: 20px 15vw 30px;
+padding: 20px 13vmax 30px;
 border-radius: 0px;
 vertical-align: inherit;
 transform-origin: 50% 50% 0px;
@@ -148,7 +148,8 @@ padding-bottom: 1vw;
 #team{
     pointer-events: none;
 font-family: Archivo Black;
-font-size: 7.6vmax;
+font-size: 14vmin;
+/* font-size: 7.6vmax; */
 font-weight: 400;
 color: transparent;
 text-transform: uppercase;
@@ -179,10 +180,12 @@ opacity: 1;
 }
 
 #club{
-    right: 25%;
+    right: 10%;
+font-size: 18vmin;
+    /* right: 25%; */
     pointer-events: none;
 font-family: Archivo Black;
-font-size:10vmax;
+/* font-size:10vmax; */
 /* font-size: 135px; */
 font-weight: 400;
 color: rgb(196, 190, 180);
@@ -231,7 +234,7 @@ text-align: left;
 white-space: normal;
 overflow: visible;
 margin: -90px 0px 0px;
-padding: 0px 7px 0px 50px;
+padding: 0px 5px 0px 13vw;
 min-height: 0px;
 width: auto;
 height: auto;
@@ -247,7 +250,7 @@ display: inline-block;
 background: transparent;
 visibility: inherit;
 opacity: 1;
-margin-left: 155px;
+/* margin-left: 155px; */
 margin-top: -75px;
 }
 
@@ -278,7 +281,7 @@ margin: 0px;
 min-height: 0px;
 width: 35vmax;
 height: auto;
-float: right;
+float: left;
 clear: none;
 z-index: 7;
 position: relative;
@@ -323,15 +326,114 @@ opacity: 1;
 
 
 
-/* #footer{
+#footer{
+    position: fixed;
+    left: 0;
+    bottom: 5vh;
+    width: 100%;
+    height: 15%;
+}
+
+#year{
+    font-family: Archivo;
+  font-size: 22px;
+  font-weight: 400;
+  color: rgba(196, 190, 180, 0.65);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  line-height: 30px;
+  text-align: left;
+  white-space: normal;
+  overflow: visible;
+  margin: 0px 0px 0px 10px;
+  padding: 0px;
+  min-height: 0px;
+  width: auto;
+  height: auto;
+  float: left;
+  clear: none;
+  z-index: 8;
+  border-radius: 0px;
+  position: relative;
+  vertical-align: inherit;
+  transform-origin: 50% 50% 0px;
+  transform: translate(0px);
+  display: inline-block;
+  background: transparent;
+  visibility: inherit;
+  opacity: 1;
+  pointer-events: auto;
+  padding-left: 10vw;
+  padding-top: 2vh;
+}
+
+
+#nextPage{
+    font-family: Archivo;
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(196, 190, 180, 0.65);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2.23667px;
+  line-height: 60px;
+  text-align: center;
+  white-space: normal;
+  overflow: visible;
+  margin: 0px;
+  padding: 0px 37px;
+  min-height: 0px;
+  width: auto;
+  height: auto;
+  float: right;
+  clear: none;
+  border-style: solid;
+  border-width: 1px 0px 0px 1px;
+  border-color: rgba(196, 190, 180, 0.5);
+  z-index: 7;
+  border-radius: 0%;
+  position: relative;
+  cursor: pointer;
+  vertical-align: inherit;
+  transform-origin: 50% 50% 0px;
+  transform: translate3d(0px, 0px, 0px);
+  display: inline-block;
+  background: rgba(255, 255, 255, 0);
+  visibility: inherit;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#nextPageBox{
+    width: auto;
+    height: auto;
+    padding-right: 10vw;
+}
+
+
+a:link ,a:visited , a:hover , a:active {
+    color: rgba(196, 190, 180, 0.65);
+    text-decoration: none;
+  }
   
-} */
+ 
+
+
 
 @media (max-width:777px) {
+    #mainBox{
+        padding-left: 7vmax;
+    }
     #team{
         transform:perspective(600px) rotateY(25deg);
+        padding-left: 2vw;
     }
-    
+    #infoBox{
+        right:35vmax;
+        margin-top: 0px;
+        float: right;
+    }
     
 }
 
@@ -346,6 +448,7 @@ opacity: 1;
         padding-left: 7vmin;
     }
     #teamBox{
+        font-size: 7.6vmax;
         padding-top: 8vh;
         margin: 30px 30px 0px 30px;
     }
@@ -362,6 +465,8 @@ opacity: 1;
     }
     #club{
         transform: perspective(600px) translate(-36px) rotateY(-25deg);
+        right: 25%;
+        font-size: 10vmax;
     }
     #info{
         padding: 0px 0px 40px 20px;
@@ -379,3 +484,5 @@ opacity: 1;
         padding: 2.8vw 7px 0px 3vw;
     }
 }
+
+
