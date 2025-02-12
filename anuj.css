@@ -365,7 +365,7 @@ opacity: 1;
   opacity: 1;
   pointer-events: auto;
   padding-left: 10vw;
-  padding-top: 2vh;
+  padding-top: 0vh;
 }
 
 
@@ -484,6 +484,34 @@ a:link ,a:visited , a:hover , a:active {
         margin-left: 0px;
         padding: 2.8vw 7px 0px 3vw;
     }
+    .fwdClub{
+        animation-name: spinClub;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+    
+    
+    .revClub{
+        animation-name: spinClub;
+        animation-duration: 0.5s;
+        animation-direction: reverse;
+        animation-timing-function: ease;
+    }
+    
+    
+      @keyframes spinClub {
+    
+        0%{ 
+            transform: (600px) translate(-200px) rotateY(-25deg);
+    
+        }
+        
+        100%{
+        transform: perspective(600px) translate3d(0px,0px,0px) ;
+        scale: 1;
+        }
+    }
 }
 
 
@@ -527,6 +555,36 @@ a:link ,a:visited , a:hover , a:active {
     scale: 0.8;
     }
 }
+
+.fwdClub{
+    animation-name: spinClub;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+
+.revClub{
+    animation-name: spinClub;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+    animation-timing-function: ease;
+}
+
+
+
+  @keyframes spinClub {
+
+    0%{ 
+        transform: (600px) translate(-200px) rotateY(-25deg);
+
+    }
+    
+    100%{
+    transform: perspective(600px) translate3d(0px,0px,0px) ;
+    scale: 1;
+    }
+}
 }
 
 @media (max-width:777px){
@@ -557,9 +615,43 @@ a:link ,a:visited , a:hover , a:active {
     }
     
 }
+
+}
+@media (max-width:777px) and (min-width:580px){
+    .fwdClub{
+        animation-name: spinClub;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+    
+    
+    .revClub{
+        animation-name: spinClub;
+        animation-duration: 0.5s;
+        animation-direction: reverse;
+        animation-timing-function: ease;
+    }
+    
+    
+      @keyframes spinClub {
+    
+        0%{ 
+            transform: (600px) translate(-200px) rotateY(-25deg);
+    
+        }
+        
+        100%{
+        transform: perspective(600px) translate3d(-100px,0px,0px) ;
+        scale: 1;
+        }
+    }
+
+
 }
 
-
-
-
+@media (min-width:777px) and (max-width:1000px) {
+    #mainBox{padding-left: 7vmax;}
+    
+}
 
