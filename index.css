@@ -100,7 +100,6 @@ body{
 @keyframes openR {
   0%{ }
   100%{left: 100%;}
-   101%{width: 0px;}
 }
 
 @keyframes openL {
