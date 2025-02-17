@@ -105,7 +105,6 @@ body{
 @keyframes openL {
   0%{}
   100%{left: -100%;}
-  101%{width: 0px;}
 }
 
 /* trigger stating animation*/
