@@ -517,6 +517,7 @@ a{
 @media (max-width:580px) {
   html,body{
       overflow-x:hidden;
+      overflow-y: hidden;
       max-width: 100%;
   }
   #mainBox{
