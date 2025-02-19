@@ -100,12 +100,12 @@ body{
 /*starting animation*/
 @keyframes openR {
   0%{ }
-  100%{left: -110%;}
+  100%{left: -150%;}
 }
 
 @keyframes openL {
   0%{}
-  100%{top: -110%;}
+  100%{top: -150%;}
 }
 
 /* trigger stating animation*/
