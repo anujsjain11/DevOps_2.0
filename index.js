@@ -1,4 +1,5 @@
 // triggering animation
+
     // triggering the animation of "team"
     document.getElementById("mainBoxHover").addEventListener("mouseover",function(){    
 

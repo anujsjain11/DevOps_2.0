@@ -66,6 +66,7 @@ html,body{
   max-width: 100%;
 }
 
+
 /* hide the defauld cursor */
 body{
   cursor:none;
@@ -99,25 +100,31 @@ body{
 /*starting animation*/
 @keyframes openR {
   0%{ }
-  100%{left: 100%;}
+  100%{left: -100%;}
 }
 
 @keyframes openL {
   0%{}
-  100%{left: -100%;}
+  100%{top: -100%;}
 }
 
 /* trigger stating animation*/
 #leftTriangel{
+  transform: scaleX(-1);
   animation-name: openR;
   animation-duration: 3s;
   animation-fill-mode: forwards;
+  /* background-color: red; */
+
 }
 
 #rightTriangel{
+  transform: scaleX(-1);
+  transform: scaleY(-1);
   animation-name: openL;
   animation-duration: 3s;
   animation-fill-mode: forwards;
+  /* background-color: green; */
 }
 
 /* area to trigger "team" and "devops" text animation*/
