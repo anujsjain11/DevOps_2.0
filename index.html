@@ -91,11 +91,33 @@
         const container = document.getElementById('canvas-container');
         const simulation = new WebGLFluidEnhanced(container);
         // this is for editing the fluid animation [configuration of animation]
-        simulation.setConfig({
-          colorPalette: ['#FFFFFF'],
-          backgroundColor: '#000000',
-          bloomIntensity:0,
-        });
+        simulation.setConfig(
+          
+          
+          {
+            backgroundColor: '#000000',
+  captureResolution: '0',
+  densityDissipation: '2.5',
+  pressureIterations: '10',
+  splatRadius: '0.15',
+  shading: false,
+  colorful: false,
+  colorUpdateSpeed: '0',
+  colorPalette: [
+    "#FFFFFFF"
+  ],
+  transparent: true,
+  bloom: false,
+  bloomIterations: '0',
+  bloomResolution: '0',
+  bloomIntensity: '0',
+  bloomThreshold: '0',
+  bloomSoftKnee:' 0',
+  sunrays: false,
+  sunraysResolution:'0',
+  sunraysWeight: '0'
+}
+       );
         // this is for start and stoping the animation 
         simulation.start();
         window.addEventListener('beforeunload', () => {
@@ -103,7 +125,6 @@
         });
       </script>
     </div>
-    <
   </body>
 <!-- cursor location js code -->
 <script src="index.js"></script>
