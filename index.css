@@ -25,7 +25,7 @@
   width: 70px;
   height: 70px;
   mix-blend-mode: difference;
-  background: radial-gradient(circle at 18.7% 37.8%, RGB(196, 190, 180) 0%, RGB(196, 190, 180)90%);
+ background: linear-gradient(to bottom right, #00000000 0%, #00000000 50%, #808080 50%, #808080 100%);
   border-radius: 50%;
   pointer-events: none;
   z-index: 20;
