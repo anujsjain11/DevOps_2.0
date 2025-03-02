@@ -25,7 +25,7 @@
   width: 70px;
   height: 70px;
   mix-blend-mode: difference;
- background: linear-gradient(to bottom right, #00000000 0%, #00000000 50%, #808080 50%, #808080 100%);
+  background: radial-gradient(circle at 18.7% 37.8%, RGB(196, 190, 180) 0%, RGB(196, 190, 180)90%);
   border-radius: 50%;
   pointer-events: none;
   z-index: 20;
@@ -85,7 +85,7 @@ body{
 .triangle {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(to bottom right, #00000000 0%, #00000000 50%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 100%);
+   background: linear-gradient(to bottom right, #00000000 0%, #00000000 50%, #808080 50%, #808080 100%);
   transition: revert;
   rotate: inherit;
   border: 0px;
